@@ -1,78 +1,104 @@
-function convert(){
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <h1> Calculador de gastos mensais </h1>
+    <div>
+      <p> Insira sua Renda Mensal: </p>
+      
+        <label for="renda">R$: </label>
+        <input id="renda" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
 
-  var renda = document.getElementById("renda");
-   var rendaM = renda.value;
- //
-  var luz = document.getElementById("luz");
-   var luzV = luz.value; 
- 
-   var luzR = 0
-   var luzP = 0
- 
-   luzR = luzV*100;
-   luzP = luzR/rendaM;
- //
-   var agua = document.getElementById("agua");
-   var aguaV = agua.value; 
- 
-   var aguaR = 0
-   var aguaP = 0
- 
-   aguaR = aguaV*100;
-   aguaP = aguaR/rendaM;
- //
-   var aluguel = document.getElementById("aluguel");
-   var aluguelV = aluguel.value; 
- 
-   var aluguelR = 0
-   var aluguelP = 0
- 
-   aluguelR = aluguelV*100;
-   aluguelP = aluguelR/rendaM;
- //
-   var internet = document.getElementById("internet");
-   var internetV = internet.value; 
- 
-   var internetR = 0
-   var internetP = 0
- 
-   internetR = internetV*100;
-   internetP = internetR/rendaM;
- //
-   var alimento = document.getElementById("alimento");
-   var alimentoV = alimento.value; 
- 
-   var alimentoR = 0
-   var alimentoP = 0
- 
-   alimentoR = alimentoV*100;
-   alimentoP = alimentoR/rendaM;
- //
-   var diversos = document.getElementById("diversos");
-   var diversosV = diversos.value; 
- 
-   var diversosR = 0
-   var diversosP = 0
- 
-   diversosR = diversosV*100;
-   diversosP = diversosR/rendaM;
- //
-   var outRes = document.getElementById("luzP");
-   outRes.innerHTML = luzP;
- //
-   var outRes = document.getElementById("aguaP");
-   outRes.innerHTML = aguaP;
- //
-   var outRes = document.getElementById("aluguelP");
-   outRes.innerHTML = aluguelP;  
- //
-   var outRes = document.getElementById("internetP");
-   outRes.innerHTML = internetP;
- //
-   var outRes = document.getElementById("alimentoP");
-   outRes.innerHTML = alimentoP;
- //
-   var outRes = document.getElementById("diversosP");
-   outRes.innerHTML = diversosP;
- 
- }
+    <div>
+      <p> Insira seus gastos com Conta de Luz: </p>
+      
+        <label for="luz">R$: </label>
+        <input id="luz" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+     <div>
+      <p> Insira seus gastos com Conta de Água: </p>
+      
+        <label for="agua">R$: </label>
+        <input id="agua" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+     <div>
+      <p> Insira seus gastos com Aluguel/Condomínio: </p>
+      
+        <label for="aluguel">R$: </label>
+        <input id="aluguel" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+     <div>
+      <p> Insira seus gastos com Conta de Internet/Telefone: </p>
+      
+        <label for="internet">R$: </label>
+        <input id="internet" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+     <div>
+      <p> Insira seus gastos com Alimentação: </p>
+      
+        <label for="alimento">R$: </label>
+        <input id="alimento" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+     <div>
+      <p> Insira seus gastos com Diversos: </p>
+      
+        <label for="diversos">R$: </label>
+        <input id="diversos" type="number" step="0.01" value="0.0"/> 
+    </div>
+    <br>
+
+    <div>
+        <button onclick="convert();">CALCULAR</button>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="luzP">0,0</span>% de sua Renda Mensal com Conta de Luz</p>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="aguaP">0,0</span>% de sua Renda Mensal com Conta de Água</p>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="aluguelP">0,0</span>% de sua Renda Mensal com Aluguel/Condomínio</p>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="internetP">0,0</span>% de sua Renda Mensal com Conta de Internet/Telefone</p>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="alimentoP">0,0</span>% de sua Renda Mensal com Alimentação</p>
+      </div>
+      <br>
+
+      <div>
+        <p>Este mês você gastou, <span id="diversosP">0,0</span>% de sua Renda Mensal com Diversos</p>
+      </div>
+      <br>
+    
+  </body>
+</html>
